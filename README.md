@@ -1,17 +1,18 @@
 ## ACI-Terraform 3 tiers application profile
 
-This repo will create a tenant with all the necesary configuration to create a 3tier apps
+This repo creates a tenant with all the necessary configuration to deploy a three-tier app in Cisco ACI and vSphere.
 
-# Make it work:
+### Make it work
 
-1. Clone the Repo
-```
-git clone https://github.com/gnuowned/aci-terraform
-cd aci-terraform
-```
-2. Modify `main.tf-example` to your settings and rename it to `main.tf`
-3. Modify the VMM Domain DN in file `application_profile.tf` with your proper VMM-Domain DN
+1. Clone the repo
+   ```
+   git clone https://github.com/gnuowned/aci-terraform
+   cd aci-terraform
+   ```
+2. Populate provider settings (credentials, APIC URL, and vSphere details) in `main.tf`.
+3. Modify the VMM Domain DN in `application_profile.tf` with your VMM-Domain DN.
 4. Run the plan and apply
-```
-terraform plan
-terraform apply
+   ```
+   terraform plan
+   terraform apply
+   ```
