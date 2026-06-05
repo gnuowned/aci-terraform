@@ -44,6 +44,8 @@ resource "aci_subnet" "db_subnet" {
 resource "aci_l3_outside" "internet" {
   tenant_dn = aci_tenant.tenant.id
   name      = "internet"
+
+  relation_l3ext_rs_ectx = aci_vrf.test_vrf.id
 }
 
 resource "aci_external_network_instance_profile" "dev_ext_net_prof" {

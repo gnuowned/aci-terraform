@@ -52,9 +52,9 @@ resource "vsphere_virtual_machine" "vm_web" {
   datastore_id     = data.vsphere_datastore.datastore.id
   depends_on       = [aci_application_epg.WEB_EPG]
 
-  num_cpus               = var.vsphere_vm_cpu
-  memory                 = var.vsphere_vm_memory
-  guest_id               = var.vsphere_vm_guest
+  num_cpus                  = var.vsphere_vm_cpu
+  memory                    = var.vsphere_vm_memory
+  guest_id                  = var.vsphere_vm_guest
   wait_for_guest_ip_timeout = -1
 
   network_interface {
@@ -94,9 +94,9 @@ resource "vsphere_virtual_machine" "vm_app" {
   datastore_id     = data.vsphere_datastore.datastore.id
   depends_on       = [aci_application_epg.APP_EPG]
 
-  num_cpus               = var.vsphere_vm_cpu
-  memory                 = var.vsphere_vm_memory
-  guest_id               = var.vsphere_vm_guest
+  num_cpus                  = var.vsphere_vm_cpu
+  memory                    = var.vsphere_vm_memory
+  guest_id                  = var.vsphere_vm_guest
   wait_for_guest_ip_timeout = -1
 
   network_interface {
@@ -136,9 +136,9 @@ resource "vsphere_virtual_machine" "vm_db" {
   datastore_id     = data.vsphere_datastore.datastore.id
   depends_on       = [aci_application_epg.DB_EPG]
 
-  num_cpus               = var.vsphere_vm_cpu
-  memory                 = var.vsphere_vm_memory
-  guest_id               = var.vsphere_vm_guest
+  num_cpus                  = var.vsphere_vm_cpu
+  memory                    = var.vsphere_vm_memory
+  guest_id                  = var.vsphere_vm_guest
   wait_for_guest_ip_timeout = -1
 
   network_interface {
